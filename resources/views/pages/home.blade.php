@@ -5,6 +5,3 @@
 @include('includes.head')
 
 
-{{--@section('content')--}}
-
-{{--@stop--}}

@@ -28,6 +28,8 @@
 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
 </ol>
+
+
 <div class="carousel-inner">
 <div class="carousel-item active">
 <img src="assets/images/girl-eichorn-outdoor.jpg" class="d-block w-100" alt="...">
@@ -84,10 +86,13 @@
 
 
 <hr>
+
+<form method="POST">
+    @csrf
 <div class="row col">
 
 <div class=" col-md-3 col-xs-4 ">
-<a class="thumbnail" href="#">
+<a class="thumbnail" href="{{route('products.index')}}">
 <img class="img-responsive" src="http://placehold.it/350x300" alt="">
 </a>
 </div>
@@ -109,7 +114,7 @@
 </div>
 
 </div>
-
+</form>
 
 
 <hr>
