@@ -1,14 +1,11 @@
 <footer class="section-footer bg-dark white">
 
-
     <div class="align-content-lg-center">
 
         <div class="col-xl-12 text-center ">
             <br>
             <h4 class=" text-white">НИКОГА НЕ ПРОПУСКАЙТЕ ОФЕРТА!</h4>
             <h6 class=" text-white">Абонирайте се за нашия бюлетин!</h6>
-
-
 
             <input  type="text" placeholder="E-MAIL">
 
@@ -20,11 +17,8 @@
                     </div>
                 </div>
 
-
-
         </div>
     </div>
-
     <br>
     <div class="container">
         <section class="footer-top padding-top">
@@ -79,14 +73,10 @@
                     </ul>
                 </aside>
 
-
-
             </div>
 
             <br>
         </section>
 
-
     </div>
-
 </footer>

@@ -5,7 +5,6 @@
 
 <style>
 
-
     .navbar {
         background: #FFE4C4;
         width: 100%;
@@ -13,8 +12,6 @@
         font-size: 20px;;
 
     }
-
-
 
 </style>
 </head>
@@ -28,10 +25,5 @@
     <span class="text-center">Търсене___</span>
     <i class="fa fa-users" aria-hidden="true">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-
-
-
     </i>
-
-
 </nav>
