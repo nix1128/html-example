@@ -8,6 +8,6 @@ Route::get('/', function()
     return View::make('pages.home');
 });
 
-Route::get('/products/{id?}', [\App\Http\Controllers\ProductController::class, 'index'])->name('products.index');
+Route::get('/products/{product}', [\App\Http\Controllers\ProductController::class, 'index'])->name('products.index');
 
 

@@ -87,34 +87,33 @@
 
 <hr>
 
-<form method="POST">
-    @csrf
+
 <div class="row col">
 
 <div class=" col-md-3 col-xs-4 ">
-<a class="thumbnail" href="{{route('products.index')}}">
+<a class="thumbnail" href="{{route('products.index',['product'=>1])}}">
 <img class="img-responsive" src="http://placehold.it/350x300" alt="">
 </a>
 </div>
 <div class=" col-md-3 col-xs-4 ">
-<a class="thumbnail" href="#">
+    <a class="thumbnail" href="{{route('products.index',['product'=>2])}}">
 <img class="img-responsive" src="http://placehold.it/350x300" alt="">
 </a>
 </div>
 <div class=" col-md-3 col-xs-45 ">
-<a class="thumbnail" href="#">
+    <a class="thumbnail" href="{{route('products.index',['product'=>3])}}">
 <img class="img-responsive" src="http://placehold.it/350x300" alt="">
 </a>
 </div>
 
 <div class=" col-md-3 col-xs-4 ">
-<a class="thumbnail" href="#">
+    <a class="thumbnail" href="{{route('products.index',['product'=>4])}}">
 <img class="img-responsive" src="http://placehold.it/350x300" alt="">
 </a>
 </div>
 
 </div>
-</form>
+
 
 
 <hr>

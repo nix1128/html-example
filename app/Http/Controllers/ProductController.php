@@ -10,9 +10,11 @@ class ProductController extends Controller
     public function index(Request $request){
 
 
+          $product_id = $request->product;
 
 
-       return view('pages.products');
+
+       return view('pages.products',compact('product_id'));
 
     }
 
