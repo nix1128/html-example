@@ -24,7 +24,7 @@
         <section class="footer-top padding-top">
             <div class="row">
 
-                <hr>
+
                 <aside class="col-sm-3 col-md-3 white">
 
                     <ul class="list-unstyled text-white">
