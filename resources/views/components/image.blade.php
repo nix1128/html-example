@@ -5,7 +5,7 @@
     <body>
 
     <div class="w3-container">
-        <img class="p-5" src="http://placehold.it/350x350" style="width:20%;cursor:zoom-in"
+        <img class="p-5" src="http://placehold.it/350x350" style="width:68%;cursor:zoom-in"
              onclick="document.getElementById('modal01').style.display='block'">
         <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
             <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
