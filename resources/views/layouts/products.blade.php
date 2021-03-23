@@ -1,6 +1,4 @@
 
-
-
     @if ($product_id == 1)
             @section('products')
             @show

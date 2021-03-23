@@ -1,8 +1,12 @@
+
+
+
+
 <footer class="section-footer bg-dark white">
 
     <div class="align-content-lg-center">
 
-        <div class="col-xl-12 text-center ">
+        <div class="col-xl-12 text-center">
             <br>
             <h4 class=" text-white">НИКОГА НЕ ПРОПУСКАЙТЕ ОФЕРТА!</h4>
             <h6 class=" text-white">Абонирайте се за нашия бюлетин!</h6>
