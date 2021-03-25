@@ -12,7 +12,7 @@
       </transition-group>
 
 
-  <a class="prev" @click="prev" >&#10094; <span>Previous</span></a>
+  <a class="prev" @click="prev" >&#10094; Previous</a>
     <a class="next" @click="next" >&#10095; Next</a>
 
      </div>
@@ -63,13 +63,7 @@ export default {
     }
   },
 
-    computed: {
-    // a computed getter
-    colored: function () {
-      // `this` points to the vm instance
-      return this.text.colored
-    }
-  }
+  
 };
 </script>
 

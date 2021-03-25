@@ -1898,13 +1898,6 @@ __webpack_require__.r(__webpack_exports__);
       this.back = true;
       this.currentImg--;
     }
-  },
-  computed: {
-    // a computed getter
-    colored: function colored() {
-      // `this` points to the vm instance
-      return this.text.colored;
-    }
   }
 });
 
@@ -38064,8 +38057,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("a", { staticClass: "prev", on: { click: _vm.prev } }, [
-        _vm._v("❮ "),
-        _c("span", [_vm._v("Previous")])
+        _vm._v("❮ Previous")
       ]),
       _vm._v(" "),
       _c("a", { staticClass: "next", on: { click: _vm.next } }, [
