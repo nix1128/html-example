@@ -2,6 +2,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="{{ asset('js/app.js') }}" defer></script>
+
 
     <style>
 
@@ -12,12 +14,8 @@
     </style>
 
 </head>
-
-
 <body>
-
-
-<div id="carouselExampleCaptions" class="carousel" data-ride="carousel">
+<!-- <div id="carouselExampleCaptions" class="carousel" data-ride="carousel">
 <ol class="carousel-indicators">
 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -52,10 +50,9 @@
 
 </div>
 
+</div> -->
 
-</div>
-
-
+<!-- 
 
 
 
@@ -67,9 +64,37 @@
 <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
 <span class="carousel-control-next-icon" aria-hidden="true"></span>
 <span class="sr-only text-light bg-dark">Next</span>
-</a>
+</a> -->
 
-<hr>
+
+
+
+<div id="app">
+    <div class="contaner">
+        <template>
+
+        <Slider/>
+        </template>
+       
+    </div>
+
+        <div class="contaner">
+        <template>
+
+        <Test/>
+        </template>
+       
+    </div>
+</div>
+
+<!-- <div id="slider">
+    
+</div> -->
+
+
+
+
+
 <div class="container">
 <div class="row">
 <div class="col text-center">
@@ -178,4 +203,18 @@
 
 
 </body>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+body {
+  margin: 0px;
+}
+</style>
+
 </html>

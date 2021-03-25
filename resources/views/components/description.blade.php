@@ -119,10 +119,12 @@
         </ul></div>
     <div class="d-flex justify-content-center"><span class="price">322лв</span></div>
 </div>
+
+
+
 <p style="font-style: italic;font-size: 14px">Продуктът няма възможност за корекции по желание на клиента</p>
 <p style="font-weight: bold;font-style: italic">ВСИЧКИ РАЗНОВИДНОСТИ</p>
 <div class="row d-flex justify-content-between">
-
     <div class="small-image " style="align-content: center">
     <img src="http://placehold.it/150x150" class="rounded float-left" alt="...">
     </div>
@@ -131,29 +133,22 @@
     </div>
     <div class="small-image " style="align-content: center">
         <img src="http://placehold.it/150x150" class="rounded float-left" alt="...">
-
     </div>
-
 </div>
 
 <div class ="d-flex justify-content-center" >
-    <button type="button" class=" btn btn-lg">ПОРЪЧАЙ</button>
+    <button type="button" class="btn btn-lg">ПОРЪЧАЙ</button>
 </div>
 
 
 <div class="row d-flex justify-content-left">
-    <span style="margin-left: inherit;text-align: center"><a href="#">ОТЗИВИ</a><x-starsrating/>
-
-
-    </span>
-
-
-
-
+    <x-starsrating/> <span style="margin:13px;color: coral"><a href="#">ОТЗИВИ</a></span>
 </div>
+
+
 <div class="row d-flex justify-content-left">
     <p>Бърза поръчка:</p>
-    <p class="p-0"><a href="#" style="color:coral">0879200781</a></p>
+    <p class="p-0"><a href="#" style="color:coral;margin:13px">0879200781</a></p>
 </div>
 
 
