@@ -26,20 +26,12 @@
         <div class="contaner">
         <template>
 
-        <Test/>
+        <!-- <Test/> -->
         </template>
        
     </div>
 </div>
-
-<!-- <div id="slider">
-    
-</div> -->
-
-
-
-
-
+<br>
 <div class="container">
 <div class="row">
 <div class="col text-center">
