@@ -1,74 +1,71 @@
 
 <template>
+  <div id="styles">
+    <transition-group
+      tag="div"
+      class="div-slider"
+      :name="back ? 'slideback' : 'slide'"
+    >
+      <div
+        @click="stop()"
+        class="card"
+        v-for="number in [currentImg]"
+        :key="number"
+      >
+        <img :src="imgList[Math.abs(currentImg) % imgList.length]" />
+        <a href="#" class="icon">
+          <i class="fa fa-search-plus"></i>
+        </a>
 
-
-<div id="styles">
-      <transition-group tag="div" class="div-slider" :name="back  ? 'slideback' : 'slide'"
-     >  <div  @click="stop()"  class="card" v-for="number in [currentImg]" :key="number" >
-            <img :src="imgList[Math.abs(currentImg) % imgList.length]"> 
-  <a href="#" class="icon" >
-    <i class="fa fa-search-plus"></i> 
-    </a>
-
-
-    <a class = "previous"  @click="prev" >&#10094; </a>
-  <a class = "next" @click="next" >&#10095; </a>
-    
+        <a class="previous" @click="prev">&#10094; </a>
+        <a class="next" @click="next">&#10095; </a>
       </div>
-      </transition-group>
-      
-   <a class = "previous"  @click="prev" >&#10094; </a>
-  <a class = "next" @click="next" >&#10095; </a>
-</div>    
+    </transition-group>
+  </div>
 </template>
 <script>
-
 export default {
- 
   data() {
     return {
-        imgList: [
-       "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-      "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-      "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg"
+      imgList: [
+        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
+        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
+        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
 
-      //  "/images/home/home-slide1.png",
-      //   "/images/home/home-slide2.png",
-      //   "/images/home/home-slide3.png",
-      //   "/images/home/home-slide4.png",
-      //   "/images/home/home-slide5.png",
-    ],
-    currentImg: 0,
-    back:false,
-
+        //  "/images/home/home-slide1.png",
+        //   "/images/home/home-slide2.png",
+        //   "/images/home/home-slide3.png",
+        //   "/images/home/home-slide4.png",
+        //   "/images/home/home-slide5.png",
+      ],
+      currentImg: 0,
+      back: false,
     };
   },
-      mounted() {
+  mounted() {
     //     this.interval = setInterval(() => {
     //     this.currentImg = this.currentImg + 1;
     // }, 3000);
-
   },
   methods: {
-    next() { 
-       this.back = false;
-       this.currentImg ++;
+    next() {
+      this.back = false;
+      this.currentImg++;
     },
-    prev() {     
-       this.back = true;
+    prev() {
+      this.back = true;
       this.currentImg--;
     },
-    stop(){
-      clearInterval(this.interval);  
+    stop() {
+      clearInterval(this.interval);
     },
   },
 };
 </script>
 <style >
-
 #styles {
   overflow: hidden;
-  color:white;
+  color: white;
 }
 
 .slide-leave-active,
@@ -93,7 +90,7 @@ export default {
   transform: translate(100%, 0);
 }
 
-.div-slider{
+.div-slider {
   overflow: hidden;
   position: relative;
   height: 100%;
@@ -105,12 +102,11 @@ export default {
   height: 100px;
   width: 100%;
   padding: 0%;
-
 }
 
-a{
-cursor: pointer;
-font-size: 30px;
+a {
+  cursor: pointer;
+  font-size: 30px;
 }
 
 .icon {
@@ -121,16 +117,16 @@ font-size: 30px;
   left: 50%;
   /* transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);*/
-  text-align: center; 
+  text-align: center;
   opacity: 0.6;
   transition: 0.4s;
 }
 
 .fa-search-plus:hover {
-  opacity: 2 
+  opacity: 2;
 }
 
-.next{
+.next {
   color: white;
   font-size: 70px;
   position: absolute;
@@ -141,14 +137,12 @@ font-size: 30px;
   width: auto;
   opacity: 5;
   transition: 0.4s;
- 
-
 }
-.next:hover{
-   opacity: 0.4 
+.next:hover {
+  opacity: 0.4;
 }
 
-.previous{
+.previous {
   color: white;
   font-size: 70px;
   position: absolute;
@@ -158,10 +152,7 @@ font-size: 30px;
   opacity: 5;
   transition: 0.4s;
 }
-.previous:hover{
-   opacity: 0.4 
+.previous:hover {
+  opacity: 0.4;
 }
-
-
-
 </style>

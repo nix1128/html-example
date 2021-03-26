@@ -1868,6 +1868,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6455,7 +6457,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#styles {\r\n  overflow: hidden;\r\n  color:white;\n}\n.slide-leave-active,\r\n.slide-enter-active {\r\n  transition: 1s;\n}\n.slide-enter {\r\n  transform: translate(100%, 0);\n}\n.slide-leave-to {\r\n  transform: translate(-100%, 0);\n}\n.slideback-leave-active,\r\n.slideback-enter-active {\r\n  transition: 1s;\n}\n.slideback-enter {\r\n  transform: translate(-100%, 0);\n}\n.slideback-leave-to {\r\n  transform: translate(100%, 0);\n}\n.div-slider{\r\n  overflow: hidden;\r\n  position: relative;\r\n  height: 100%;\r\n  width: 100%;\n}\n.div-slider .card {\r\n  position: absolute;\r\n  height: 100px;\r\n  width: 100%;\r\n  padding: 0%;\n}\na{\r\ncursor: pointer;\r\nfont-size: 30px;\n}\n.icon {\r\n  color: white;\r\n  font-size: 50px;\r\n  position: absolute;\r\n  top: 150%;\r\n  left: 50%;\r\n  /* transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%);*/\r\n  text-align: center; \r\n  opacity: 0.6;\r\n  transition: 0.4s;\n}\n.fa-search-plus:hover {\r\n  opacity: 2\n}\n.next{\r\n  color: white;\r\n  font-size: 70px;\r\n  position: absolute;\r\n  top: 300%;\r\n  left: 90%;\r\n  /* transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%); */\r\n  width: auto;\r\n  opacity: 5;\r\n  transition: 0.4s;\n}\n.next:hover{\r\n   opacity: 0.4\n}\n.previous{\r\n  color: white;\r\n  font-size: 70px;\r\n  position: absolute;\r\n  width: auto;\r\n  top: 300%;\r\n  right: 90%;\r\n  opacity: 5;\r\n  transition: 0.4s;\n}\n.previous:hover{\r\n   opacity: 0.4\n}\r\n\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#styles {\r\n  overflow: hidden;\r\n  color: white;\n}\n.slide-leave-active,\r\n.slide-enter-active {\r\n  transition: 1s;\n}\n.slide-enter {\r\n  transform: translate(100%, 0);\n}\n.slide-leave-to {\r\n  transform: translate(-100%, 0);\n}\n.slideback-leave-active,\r\n.slideback-enter-active {\r\n  transition: 1s;\n}\n.slideback-enter {\r\n  transform: translate(-100%, 0);\n}\n.slideback-leave-to {\r\n  transform: translate(100%, 0);\n}\n.div-slider {\r\n  overflow: hidden;\r\n  position: relative;\r\n  height: 100%;\r\n  width: 100%;\n}\n.div-slider .card {\r\n  position: absolute;\r\n  height: 100px;\r\n  width: 100%;\r\n  padding: 0%;\n}\na {\r\n  cursor: pointer;\r\n  font-size: 30px;\n}\n.icon {\r\n  color: white;\r\n  font-size: 50px;\r\n  position: absolute;\r\n  top: 150%;\r\n  left: 50%;\r\n  /* transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%);*/\r\n  text-align: center;\r\n  opacity: 0.6;\r\n  transition: 0.4s;\n}\n.fa-search-plus:hover {\r\n  opacity: 2;\n}\n.next {\r\n  color: white;\r\n  font-size: 70px;\r\n  position: absolute;\r\n  top: 300%;\r\n  left: 90%;\r\n  /* transform: translate(-50%, -50%);\r\n  -ms-transform: translate(-50%, -50%); */\r\n  width: auto;\r\n  opacity: 5;\r\n  transition: 0.4s;\n}\n.next:hover {\r\n  opacity: 0.4;\n}\n.previous {\r\n  color: white;\r\n  font-size: 70px;\r\n  position: absolute;\r\n  width: auto;\r\n  top: 300%;\r\n  right: 90%;\r\n  opacity: 5;\r\n  transition: 0.4s;\n}\n.previous:hover {\r\n  opacity: 0.4;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38078,13 +38080,7 @@ var render = function() {
           )
         }),
         0
-      ),
-      _vm._v(" "),
-      _c("a", { staticClass: "previous", on: { click: _vm.prev } }, [
-        _vm._v("❮ ")
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "next", on: { click: _vm.next } }, [_vm._v("❯ ")])
+      )
     ],
     1
   )
