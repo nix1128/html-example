@@ -4,7 +4,7 @@
 
 <div id="styles">
       <transition-group tag="div" class="div-slider" :name="back  ? 'slideback' : 'slide'"
-     >  <div  @mouseover="stop()" @click.right="next" class="card" v-for="number in [currentImg]" :key="number" >
+     >  <div  @click="stop()" @click.right="next" class="card" v-for="number in [currentImg]" :key="number" >
             <img :src="imgList[Math.abs(currentImg) % imgList.length]"> 
   <a href="#" class="icon" >
     <i class="fa fa-search-plus"></i></a>

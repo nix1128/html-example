@@ -38047,7 +38047,7 @@ var render = function() {
               key: number,
               staticClass: "card",
               on: {
-                mouseover: function($event) {
+                click: function($event) {
                   return _vm.stop()
                 },
                 contextmenu: function($event) {
