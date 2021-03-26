@@ -3,25 +3,20 @@
 
 
 <div id="styles">
-      <transition-group tag="div" class="div-slider" :name="back ? 'slideback' : 'slide'" >   
-      <div class="card" v-for="number in [currentImg]" v-bind:key="number" >
-        <img :src="imgList[Math.abs(currentImg) % imgList.length]"/>
+      <transition-group tag="div" class="div-slider" :name="back  ? 'slideback' : 'slide'"
+     >  <div  @mouseover="stop()" @click.right="next" class="card" v-for="number in [currentImg]" :key="number" >
+            <img :src="imgList[Math.abs(currentImg) % imgList.length]"> 
+  <a href="#" class="icon" >
+    <i class="fa fa-search-plus"></i></a>
       </div>
-
-      
       </transition-group>
-
-
-  <a class="prev" @click="prev" >&#10094; Previous</a>
-    <a class="next" @click="next" >&#10095; Next</a>
-
-     </div>
-
-
-     
+  <a  @mouseover="prev" >&#10094; </a>
+  .....
+    <a  @mouseover="next" >&#10095;&#10095; </a>
+</div>    
 </template>
-
 <script>
+
 export default {
  
   data() {
@@ -39,39 +34,35 @@ export default {
     ],
     currentImg: 0,
     back:false,
-    text:''
 
-  
     };
   },
       mounted() {
-       setInterval(() => {
+        this.interval = setInterval(() => {
         this.currentImg = this.currentImg + 1;
-    }, 5000);
-   
+    }, 4000);
+
   },
   methods: {
-
     next() { 
        this.back = false;
-      this.currentImg ++;
+       this.currentImg ++;
     },
-    prev() {
-      
+    prev() {     
        this.back = true;
       this.currentImg--;
-    }
+    },
+    stop(){
+      clearInterval(this.interval);  
+    },
   },
-
-  
 };
 </script>
-
-
 <style >
+
 #styles {
   overflow: hidden;
-  color:blue;
+  color:cadetblue;
 }
 
 .slide-leave-active,
@@ -107,13 +98,31 @@ export default {
   position: absolute;
   height: 100px;
   width: 100%;
+  padding: 0%;
 
 }
+
 a{
 cursor: pointer;
 font-size: 20px;
 }
 
+.icon {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+   opacity: 0.6;
+  transition: 0.4s;
+}
+
+.fa-search-plus:hover {
+  opacity: 2 
+}
 
 
 </style>
