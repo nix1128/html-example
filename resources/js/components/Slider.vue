@@ -4,15 +4,21 @@
 
 <div id="styles">
       <transition-group tag="div" class="div-slider" :name="back  ? 'slideback' : 'slide'"
-     >  <div  @click="stop()" @click.right="next" class="card" v-for="number in [currentImg]" :key="number" >
+     >  <div  @click="stop()"  class="card" v-for="number in [currentImg]" :key="number" >
             <img :src="imgList[Math.abs(currentImg) % imgList.length]"> 
   <a href="#" class="icon" >
-    <i class="fa fa-search-plus"></i></a>
+    <i class="fa fa-search-plus"></i> 
+    </a>
+
+
+    <a class = "previous"  @click="prev" >&#10094; </a>
+  <a class = "next" @click="next" >&#10095; </a>
+    
       </div>
       </transition-group>
-  <a  @mouseover="prev" >&#10094; </a>
-  .....
-    <a  @mouseover="next" >&#10095;&#10095; </a>
+      
+   <a class = "previous"  @click="prev" >&#10094; </a>
+  <a class = "next" @click="next" >&#10095; </a>
 </div>    
 </template>
 <script>
@@ -38,9 +44,9 @@ export default {
     };
   },
       mounted() {
-        this.interval = setInterval(() => {
-        this.currentImg = this.currentImg + 1;
-    }, 4000);
+    //     this.interval = setInterval(() => {
+    //     this.currentImg = this.currentImg + 1;
+    // }, 3000);
 
   },
   methods: {
@@ -62,7 +68,7 @@ export default {
 
 #styles {
   overflow: hidden;
-  color:cadetblue;
+  color:white;
 }
 
 .slide-leave-active,
@@ -104,7 +110,7 @@ export default {
 
 a{
 cursor: pointer;
-font-size: 20px;
+font-size: 30px;
 }
 
 .icon {
@@ -113,16 +119,49 @@ font-size: 20px;
   position: absolute;
   top: 150%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-   opacity: 0.6;
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);*/
+  text-align: center; 
+  opacity: 0.6;
   transition: 0.4s;
 }
 
 .fa-search-plus:hover {
   opacity: 2 
 }
+
+.next{
+  color: white;
+  font-size: 70px;
+  position: absolute;
+  top: 300%;
+  left: 90%;
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  width: auto;
+  opacity: 5;
+  transition: 0.4s;
+ 
+
+}
+.next:hover{
+   opacity: 0.4 
+}
+
+.previous{
+  color: white;
+  font-size: 70px;
+  position: absolute;
+  width: auto;
+  top: 300%;
+  right: 90%;
+  opacity: 5;
+  transition: 0.4s;
+}
+.previous:hover{
+   opacity: 0.4 
+}
+
 
 
 </style>
