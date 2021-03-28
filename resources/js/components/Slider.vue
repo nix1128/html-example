@@ -7,7 +7,9 @@
       :name="back ? 'slideback' : 'slide'"
     >
       <div
-        @click="stop()"
+  
+       @mouseover="stop"
+        @mouseleave="start"
         class="card"
         v-for="number in [currentImg]"
         :key="number"
@@ -16,7 +18,7 @@
         <a href="#" class="icon">
           <i class="fa fa-search-plus"></i>
         </a>
-
+     
         <a class="previous" @click="prev">&#10094; </a>
         <a class="next" @click="next">&#10095; </a>
       </div>
@@ -25,6 +27,7 @@
 </template>
 <script>
 export default {
+
   data() {
     return {
       imgList: [
@@ -40,12 +43,18 @@ export default {
       ],
       currentImg: 0,
       back: false,
+      
+
     };
   },
   mounted() {
-    //     this.interval = setInterval(() => {
-    //     this.currentImg = this.currentImg + 1;
-    // }, 3000);
+   
+  },
+
+  created(){
+       this.interval = setInterval(() => {
+        this.currentImg = this.currentImg + 1;
+    }, 2000);
   },
   methods: {
     next() {
@@ -59,8 +68,17 @@ export default {
     stop() {
       clearInterval(this.interval);
     },
-  },
-};
+
+       start(){
+       this.interval = setInterval(() => {
+        this.currentImg = this.currentImg + 1;
+    }, 2000);
+}
+   
+
+
+   },
+  };
 </script>
 <style >
 #styles {
@@ -101,7 +119,7 @@ export default {
   position: absolute;
   height: 100px;
   width: 100%;
-  padding: 0%;
+  
 }
 
 a {
@@ -120,6 +138,9 @@ a {
   text-align: center;
   opacity: 0.6;
   transition: 0.4s;
+  
+  
+  
 }
 
 .fa-search-plus:hover {
@@ -137,9 +158,13 @@ a {
   width: auto;
   opacity: 5;
   transition: 0.4s;
+  z-index:100;
+  
+
+  
 }
 .next:hover {
-  opacity: 0.4;
+  opacity: 0.1;
 }
 
 .previous {
@@ -151,8 +176,12 @@ a {
   right: 90%;
   opacity: 5;
   transition: 0.4s;
+  z-index:100;
 }
 .previous:hover {
-  opacity: 0.4;
+   opacity: 0.1;
 }
+
+
+
 </style>
